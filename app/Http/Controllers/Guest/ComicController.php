@@ -16,12 +16,14 @@ class ComicController extends Controller
     public function index()
     {
         $comics = Comic::all();
+        $page_title = 'Elenco Comics';
 
-        $data = [
-            'comics' => $comics
-        ];
+        // $data = [
+        //     'comics' => $comics
+        //     'page_title => $page_title
+        // ];
 
-        return view('comics.index',$data);
+        return view('comics.index', compact('comics','page_title'));
     }
 
     /**
