@@ -24,6 +24,7 @@
             <div class="container">
                 @foreach ($comics as $comic)
                 <div class="p-4">
+                    <a href="{{ route('comics.show',$comic) }}">link al fumetto</a>
                     <h2>{{ $comic->title }}</h2>
                     <p>{{ $comic->description }}</p>
                     <img src="{{ $comic->thumb }}" alt="">
