@@ -11,10 +11,10 @@
             <h2>{{ $comic->title }}</h2>
             <p>{{ $comic->description }}</p>
             <img src="{{ $comic->thumb }}" alt="">
-            <h3>$ {{ $comic->price }}</h3>
+            {{-- <h3>$ {{ $comic->price }}</h3>
             <h4>Series: {{ $comic->series }} </h4>
             <h5>Release date: {{ $comic->sale_date }}</h5>
-            <h5>Type: {{ $comic->type }}</h5>
+            <h5>Type: {{ $comic->type }}</h5> --}}
         </div>
 
 

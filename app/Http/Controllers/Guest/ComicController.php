@@ -59,7 +59,7 @@ class ComicController extends Controller
         //in questo caso show, andando a trovare la primary key
         //di ogni singolo elemento, ovviamente,
         //cerca tramite colonna id
-        $comic = Comic::find($id);
+        $comic = Comic::findOrFail($id);
 
         return view('comics.show', compact('comic'));
 
