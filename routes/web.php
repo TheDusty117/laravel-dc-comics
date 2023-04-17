@@ -29,6 +29,8 @@ Route::get('/comics/{id}',[ComicController::class, 'show'])->name('comics.show')
 //creato lo store che mi aggiunge il nuovo comic da me creato
 Route::post('/comics',[ComicController::class, 'store'])->name('comics.store');
 
+
 //creo la route dell'edit
 Route::get('/comics/{comic}/edit',[ComicController::class, 'edit'])->name('comics.edit');
-
+//le modifiche che fara' l'edit dovranno essere 'messe' (PUT PATCH) e quindi applicate
+Route::put('/comics/{comic}',[ComicController::class, 'update'])->name('comics.update');//funziono come lo STore

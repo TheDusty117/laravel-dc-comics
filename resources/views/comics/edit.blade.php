@@ -12,9 +12,12 @@
     </div>
 
     <div class="container">
-        <form class="my-3" action="" method="POST">
+        {{-- in action si aggiunge la rotta parametrica --}}
+        <form class="my-3" action="{{ route('comics.update',$comic) }}" method="POST">
 
             @csrf
+            {{-- aggiungo direttiva put per specificare il metodo con rotta--}}
+            @method('PUT')
 
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo</label>
