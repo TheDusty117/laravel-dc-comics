@@ -104,7 +104,21 @@ class ComicController extends Controller
      */
     public function update(Request $request)
     {
-        //
+        //ora va aggiunto update, per fare update di modifiche che noi andiamo a fare nel form
+        $data=$request->all(); //prende tutte le chiavi nell'array(title descr, thumb ecc..)
+
+        // $comic->update($data); //poi esegue la query per salvare i nostri dati sul database
+        $new_comic->title = $data['title'];
+        $new_comic->description = $data['description'];
+        $new_comic->thumb = $data['thumb'];
+        $new_comic->price = $data['price'];
+        $new_comic->series = $data['series'];
+        $new_comic->sale_date = $data['sale_date'];
+        $new_comic->type = $data['type'];
+
+        $new_comic->save(); // qui save, va ad aggiornare il nostro mode(siamo in update ovviamente)
+
+        return \to_route('comics.show',$comic);
 
     }
 
