@@ -8,18 +8,12 @@
     <div class="container">
         <h3>CICLO LE INFO BASE DEL COMIC</h3>
         <div class="row">
-
+{{--
             <ul>
                 <li>
-                    <a href="">one</a>
+                    <a href="">VAI AI COMICS</a>
                 </li>
-                <li>
-                    <a href="">two</a>
-                </li>
-                <li>
-                    <a href="">three</a>
-                </li>
-            </ul>
+            </ul> --}}
 
             <div class="container">
                 @foreach ($comics as $comic)

@@ -12,14 +12,11 @@
 
             <ul>
                 <li>
-                    <a href="">one</a>
+                    <a href="{{ route('comics.index') }}">
+                        <h1>Vai ai Comics</h1>
+                    </a>
                 </li>
-                <li>
-                    <a href="">two</a>
-                </li>
-                <li>
-                    <a href="">three</a>
-                </li>
+
             </ul>
 
         </div>
