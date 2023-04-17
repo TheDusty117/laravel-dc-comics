@@ -23,23 +23,32 @@
                             Nuovo comic
                         </a>
                     </div>
+                    <div class="col-auto">
+                        {{-- BOTTONE ROTTA ALLA CREAZIONE DEL NUOVO COMIC --}}
+                        <a class="btn btn-secondary" href="{{ route('comics.create') }}">
+                            Modifica comic
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <div class="container">
-                @foreach ($comics as $comic)
-                <div class="p-4">
-                    <a href="{{ route('comics.show',$comic->id) }}">
-                        <h2>{{ $comic->title }}</h2>
-                    </a>
-                    {{-- <p>{{ $comic->description }}</p> --}}
-                    <img src="{{ $comic->thumb }}" alt="">
-                    <h3>$ {{ $comic->price }}</h3>
-                    <h4>Series: {{ $comic->series }} </h4>
-                    <h5>Release date: {{ $comic->sale_date }}</h5>
-                    <h5>Type: {{ $comic->type }}</h5>
+                <div class="row">
+
+                    @foreach ($comics as $comic)
+                    <div class="col-4 colonna p-4">
+                        <a href="{{ route('comics.show',$comic->id) }}">
+                            <h2>{{ $comic->title }}</h2>
+                        </a>
+                        {{-- <p>{{ $comic->description }}</p> --}}
+                        <img src="{{ $comic->thumb }}" alt="">
+                        <h3>$ {{ $comic->price }}</h3>
+                        <h4>Series: {{ $comic->series }} </h4>
+                        <h5>Release date: {{ $comic->sale_date }}</h5>
+                        <h5>Type: {{ $comic->type }}</h5>
+                    </div>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
 
         </div>
