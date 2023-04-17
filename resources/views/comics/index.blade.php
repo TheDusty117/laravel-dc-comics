@@ -6,14 +6,25 @@
 
 <section class="content-section">
     <div class="container">
-        <h3>CICLO LE INFO BASE DEL COMIC</h3>
+
         <div class="row">
-{{--
+            {{--
             <ul>
                 <li>
                     <a href="">VAI AI COMICS</a>
                 </li>
             </ul> --}}
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-auto">
+                        {{-- BOTTONE ROTTA ALLA CREAZIONE DEL NUOVO COMIC --}}
+                        <a class="btn btn-primary" href="{{ route('comics.create') }}">
+                            Nuovo comic
+                        </a>
+                    </div>
+                </div>
+            </div>
 
             <div class="container">
                 @foreach ($comics as $comic)
