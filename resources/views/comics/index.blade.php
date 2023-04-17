@@ -23,12 +23,7 @@
                             Nuovo comic
                         </a>
                     </div>
-                    <div class="col-auto">
-                        {{-- BOTTONE ROTTA ALLA CREAZIONE DEL NUOVO COMIC --}}
-                        <a class="btn btn-secondary" href="{{ route('comics.create') }}">
-                            Modifica comic
-                        </a>
-                    </div>
+
                 </div>
             </div>
 
