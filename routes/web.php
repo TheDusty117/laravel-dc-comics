@@ -26,5 +26,7 @@ Route::get('/comics/create',[ComicController::class, 'create'])->name('comics.cr
 
 Route::get('/comics/{id}',[ComicController::class, 'show'])->name('comics.show');
 
+//creato lo store che mi aggiunge il nuovo comic da me creato
 Route::post('/comics',[ComicController::class, 'store'])->name('comics.store');
 
+//creo la route dell

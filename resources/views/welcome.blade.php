@@ -16,7 +16,6 @@
                         <h1>Vai ai Comics</h1>
                     </a>
                 </li>
-
             </ul>
 
         </div>
