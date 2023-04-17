@@ -29,4 +29,6 @@ Route::get('/comics/{id}',[ComicController::class, 'show'])->name('comics.show')
 //creato lo store che mi aggiunge il nuovo comic da me creato
 Route::post('/comics',[ComicController::class, 'store'])->name('comics.store');
 
-//creo la route dell
+//creo la route dell'edit
+Route::get('/comics/{comic}/edit',[ComicController::class, 'edit'])->name('comics.edit');
+

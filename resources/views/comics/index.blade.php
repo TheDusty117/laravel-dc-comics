@@ -46,6 +46,7 @@
                         <h4>Series: {{ $comic->series }} </h4>
                         <h5>Release date: {{ $comic->sale_date }}</h5>
                         <h5>Type: {{ $comic->type }}</h5>
+                        <a class="btn btn-secondary" href="{{ route('comics.edit',$comic) }}">Modifica</a>
                     </div>
                     @endforeach
                 </div>
