@@ -7,7 +7,7 @@
 
 <section class="content-section">
     <div class="container">
-        <h3>TRENI E ORARI</h3>
+        <h3>Clicca qui sotto per vedere i Comics!</h3>
         <div class="row">
 
             <ul>
