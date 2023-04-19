@@ -44,12 +44,13 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
+        //sostituisco a $data request->all()
+        $data = $request->validate([
+            'title' => 'required|max:255|min:3'
+        ]);
 
-        //salvi tutto in dollaro data, per poi utilizzare cio che metti nel form
-        $data = $request->all();
-        //gli dico di creare una nuova cosa chiamata new_comic
-        //passandogli ovviamente tutte le proprieta' originali
+        // $data = $request->all();
+
         $new_comic = new Comic();
 
         $new_comic->title = $data['title'];
@@ -104,10 +105,8 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //ora va aggiunto update, per fare update di modifiche che noi andiamo a fare nel form
-        $data=$request->all(); //prende tutte le chiavi nell'array(title descr, thumb ecc..)
+        $data=$request->all();
 
-        // $comic->update($data); //poi esegue la query per salvare i nostri dati sul database
         $comic->title = $data['title'];
         $comic->description = $data['description'];
         $comic->thumb = $data['thumb'];
