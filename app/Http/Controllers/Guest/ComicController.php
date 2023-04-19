@@ -115,15 +115,29 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $data=$request->all();
+        // $data=$request->all();
 
-        $comic->title = $data['title'];
-        $comic->description = $data['description'];
-        $comic->thumb = $data['thumb'];
-        $comic->price = $data['price'];
-        $comic->series = $data['series'];
-        $comic->sale_date = $data['sale_date'];
-        $comic->type = $data['type'];
+        // $comic->title = $data['title'];
+        // $comic->description = $data['description'];
+        // $comic->thumb = $data['thumb'];
+        // $comic->price = $data['price'];
+        // $comic->series = $data['series'];
+        // $comic->sale_date = $data['sale_date'];
+        // $comic->type = $data['type'];
+
+
+        //VERSIONE CON VALIDATE COPIATA DA STORE
+
+        $data = $request->validate([
+            'title' => 'required|max:255|min:3',
+            'description' => 'string|nullable',
+            'thumb' => 'required|max:255|url',
+            'price' => 'required',
+            'series' => 'required|max:255',
+            'sale_date' => 'required',
+            'type' => ['required',Rule::in(['comic book','graphic novel','illustration book'])],
+
+        ]);
 
         $comic->save(); // qui save, va ad aggiornare il nostro mode(siamo in update ovviamente)
 
