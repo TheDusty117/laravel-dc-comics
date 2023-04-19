@@ -61,6 +61,7 @@ class ComicController extends Controller
 
         // $data = $request->all();
 
+        //SCOMMENTA SOTTO
         $new_comic = new Comic();
 
         $new_comic->title = $data['title'];
@@ -72,8 +73,10 @@ class ComicController extends Controller
         $new_comic->type = $data['type'];
 
         $new_comic->save();
+        // $new_comic = Comic::create($data);
 
         return redirect()->route('comics.show',$new_comic);
+        // return to_route('pastas.show', $new_comic);
     }
 
     /**
